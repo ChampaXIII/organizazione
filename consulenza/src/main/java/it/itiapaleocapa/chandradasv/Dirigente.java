@@ -1,3 +1,5 @@
+package it.itiapaleocapa.chandradasv;
+
 public class Dirigente extends Personale{
 
     public Dirigente(LocalDate assunzione, int codice, String cognome, String nome, boolean interno) {

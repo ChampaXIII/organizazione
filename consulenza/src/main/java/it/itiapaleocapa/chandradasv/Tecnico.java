@@ -1,3 +1,5 @@
+package it.itiapaleocapa.chandradasv;
+
 public class Tecnico extends Personale{
     private String specializzazione;
     private boolean ie;
