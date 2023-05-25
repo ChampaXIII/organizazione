@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeEach;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * Unit test for simple App.
  */
@@ -11,7 +16,7 @@ class AppTest {
     private Progetto project;
     private ArrayList<Dirigente> dirigenti;
     private ArrayList<Funzionario> funzionari;
-    private ArrayList<tecnico> tecnici;
+    private ArrayList<Tecnico> tecnici;
 
     @BeforeEach
     void setUp() {
@@ -54,8 +59,8 @@ class AppTest {
 
     @Test
     void testSetTec() {
-        ArrayList<tecnico> newTecnici = new ArrayList<>();
-        newTecnici.add(new tecnico());
+        ArrayList<Tecnico> newTecnici = new ArrayList<>();
+        newTecnici.add(new Tecnico());
         project.setTec(newTecnici);
         assertEquals(newTecnici, project.getTec());
     }
@@ -91,7 +96,7 @@ class AppTest {
 
     @Test
     void testAggiungiTecnico() {
-        tecnico newTecnico = new tecnico();
+        Tecnico newTecnico = new Tecnico();
         LocalDate assunzione = LocalDate.now().minusYears(5);
         newTecnico.setAssunzione(assunzione);
         newTecnico.setSpecializzazione("informatica/telecomunicazioni");

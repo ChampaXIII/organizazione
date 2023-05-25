@@ -2,8 +2,12 @@ package it.itiapaleocapa.chandradasv;
 
 public class Funzionario extends Personale{
 
-    public Funzionario(int c, String co, String no) {
-        super(c, co, no);
+    public Funzionario(int codice, String cognome, String nome) {
+        super(codice, cognome, nome);
+    }
+
+    public Funzionario(){
+        super();
     }
     
 }

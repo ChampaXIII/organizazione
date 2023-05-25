@@ -4,40 +4,40 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Progetto {
-    private ArrayList<Dirigente> dir;
-    private ArrayList<Funzionario> fun;
-    private ArrayList<Tecnico> tec ;
+    private ArrayList<Dirigente> direttori;
+    private ArrayList<Funzionario> funzionari;
+    private ArrayList<Tecnico> tecnico ;
     private int costoOrTot;
 
-    public Progetto(ArrayList<Dirigente> dir, ArrayList<Funzionario> fun, ArrayList<Tecnico> tec, int costoOrTot) {
-        this.dir = dir;
-        this.fun = fun;
-        this.tec = tec;
+    public Progetto(ArrayList<Dirigente> direttori, ArrayList<Funzionario> funzionari, ArrayList<Tecnico> tecnico, int costoOrTot) {
+        this.direttori = direttori;
+        this.funzionari = funzionari;
+        this.tecnico = tecnico;
         this.costoOrTot = costoOrTot;
     }
 
     public ArrayList<Dirigente> getDir() {
-        return this.dir;
+        return this.direttori;
     }
 
-    public void setDir(ArrayList<Dirigente> dir) {
-        this.dir = dir;
+    public void setDir(ArrayList<Dirigente> direttori) {
+        this.direttori = direttori;
     }
 
     public ArrayList<Funzionario> getFun() {
-        return this.fun;
+        return this.funzionari;
     }
 
-    public void setFun(ArrayList<Funzionario> fun) {
-        this.fun = fun;
+    public void setFun(ArrayList<Funzionario> funzionari) {
+        this.funzionari = funzionari;
     }
 
     public ArrayList<Tecnico> getTec() {
-        return this.tec;
+        return this.tecnico;
     }
 
-    public void setTec(ArrayList<Tecnico> tec) {
-        this.tec = tec;
+    public void setTec(ArrayList<Tecnico> tecnico) {
+        this.tecnico = tecnico;
     }
 
     public int getCostoTot() {
@@ -49,11 +49,11 @@ public class Progetto {
     }
 
     public void aggiungiDirigente (Dirigente i){
-        dir.add(i);
+        direttori.add(i);
         costoOrTot+=100;
     }
     public void aggiungiFunzionario (Funzionario i){
-        fun.add(i);
+        funzionari.add(i);
         LocalDate confronto=LocalDate.now();
         if (confronto.getYear()-i.getAssunzione().getYear()<10){
             costoOrTot+=70;
@@ -63,7 +63,7 @@ public class Progetto {
         }
     }
     public void aggiungiTecnico (Tecnico i){
-        tec.add(i);
+        tecnico.add(i);
         LocalDate confronto=LocalDate.now();
         if (i.getSpecializzazione().equals("informatica/telecomunicazioni")) {
             costoOrTot+=40;

@@ -3,10 +3,14 @@ package it.itiapaleocapa.chandradasv;
 public class Tecnico extends Personale{
     private String specializzazione;
     private boolean ie;
-    public Tecnico(int c, String co, String no, boolean dv, String sp) {
-        super(c, co, no);
+    public Tecnico(int codice, String cognme, String nome, boolean dv, String sp) {
+        super(codice, cognme, nome);
         this.specializzazione=sp;
         this.ie=dv;
+    }
+
+    public Tecnico(){
+        super();
     }
 
     public String getSpecializzazione() {
